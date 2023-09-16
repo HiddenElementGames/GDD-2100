@@ -6,3 +6,5 @@ if(!instance_exists(obj_enemy_spawner))
 {
 	instance_create_layer(0, 0, "Instances", obj_enemy_spawner);
 }
+
+instance_create_layer(x, y - 32, "Instances", obj_building_material);

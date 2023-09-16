@@ -13,3 +13,8 @@ hp = 100;
 max_hp = 100;
 attack_cooldown = 0.4;
 can_attack = true;
+
+building_materials = 0;
+
+kill_counter = 0;
+win_kills = 50;

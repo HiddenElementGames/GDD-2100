@@ -56,14 +56,16 @@ if(distance_to_object(player) > min_distance)
 	//	//	move_towards_point(x + 100, y, move_speed);
 	//	//}
 	//}
-	if(collision_line(x, y - 32, player.x, player.y - 32, obj_wall, false, false))
-	{
-		speed = 0;
-	}
-	else
-	{
-		move_towards_point(player.x, player.y, move_speed);
-	}
+	//if(collision_line(x, y - 32, player.x, player.y - 32, obj_wall, false, false))
+	//{
+	//	speed = 0;
+	//}
+	//else
+	//{
+	//	move_towards_point(player.x, player.y, move_speed);
+	//}
+	
+	mp_potential_step(obj_player.x, obj_player.y, move_speed, false);
 	
 }
 else
