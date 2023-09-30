@@ -12,4 +12,4 @@ draw_rectangle(5, 5, 1400, 35, false);
 
 draw_set_color(c_white);
 
-draw_text(7, 5, "Health (bar below)          Building Materials: " + string(player.building_materials) + "         Enemies killed: " + string(player.kill_counter) + "/" + string(player.win_kills));
+draw_text(7, 5, "Health (bar below)          Building Materials: " + string(player.building_materials) + "         Enemies killed: " + string(player.kill_counter));

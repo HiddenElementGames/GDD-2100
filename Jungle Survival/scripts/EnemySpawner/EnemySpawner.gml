@@ -27,7 +27,17 @@ function SpawnEnemy(_enemy)
 	{
 		var _dir = random_range(0, 359);
 		var _distance = random_range(_padding + 10 + _enemy.spawnDistance, _padding + 100 + _enemy.spawnDistance);
-		instance_create_layer(x1 + lengthdir_x(_distance, _dir), y1 + lengthdir_y(_distance, _dir), "Instances", _enemy.object);
+		var _newEnemy = instance_create_layer(x1 + lengthdir_x(_distance, _dir), y1 + lengthdir_y(_distance, _dir), "Instances", _enemy.object);
+		while(collision_rectangle(_newEnemy.x-40, _newEnemy.y-70, _newEnemy.x + 40, _newEnemy.y + 8, obj_wall, true, false))
+		{
+			instance_destroy(_newEnemy);
+			_newEnemy = noone;
+			_dir = random_range(0, 359);
+			_distance = random_range(_padding + 10 + _enemy.spawnDistance, _padding + 100 + _enemy.spawnDistance);
+			_newEnemy = instance_create_layer(x1 + lengthdir_x(_distance, _dir), y1 + lengthdir_y(_distance, _dir), "Instances", _enemy.object);
+			_padding += 30;
+		}
+		
 		show_debug_message("Spawning enemy");
 		i++;
 	}

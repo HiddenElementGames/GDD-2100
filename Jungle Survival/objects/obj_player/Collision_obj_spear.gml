@@ -4,7 +4,7 @@
 
 instance_destroy(other);
 
-hp -= 5;
+hp -= 10;
 
 if(hp <= 0)
 {
